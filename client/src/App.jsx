@@ -17,7 +17,7 @@ import MyOrders from "./pages/MyOrders";
 import OrderDetails from "./pages/OrderDetails";
 import ProductDetails from "./pages/ProductDetails";
 import Profile from "./pages/Profile";
-
+import NewProduct from "./pages/NewProduct";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminOrders from "./pages/AdminOrders";
 import AdminProducts from "./pages/AdminProducts";
@@ -124,7 +124,14 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/order-success" element={<OrderSuccess />} />
-
+        <Route
+  path="/admin/new-product"
+  element={
+    <AdminRoute>
+      <NewProduct />
+    </AdminRoute>
+  }
+/>
         {/* USER ONLY */}
         <Route
           path="/orders"

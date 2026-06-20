@@ -1637,63 +1637,6 @@ button:active {
   font-size: 16px;
 }
 
-.admin-product-card button {
-  background: #ef4444;
-}
-
-.add-product-form {
-  display: grid;
-  gap: 12px;
-  max-width: 500px;
-}
-
-.add-product-form input {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  outline: none;
-  background: #ffffff;
-  color: #111827;
-}
-
-.add-product-form input:focus {
-  border-color: #facc15;
-}
-
-.add-product-form button {
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background: #facc15;
-  color: #111827;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.add-product-form button:hover {
-  background: #eab308;
-}
-.add-product-form textarea {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  outline: none;
-  background: #ffffff;
-  color: #111827;
-  resize: none;
-}
-
-.add-product-form textarea:focus {
-  border-color: #facc15;
-}
-
-.desc {
-  font-size: 12px;
-  color: #6b7280;
-  margin-top: 5px;
-  min-height: 30px;
-}
 
 .user-card {
   display: flex;
@@ -1869,4 +1812,307 @@ button:active {
   margin-top: 15px;
   color: #555;
   line-height: 1.6;
+}
+
+/* ================= ADMIN DASHBOARD ================= */
+
+.admin-dashboard {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 30px;
+}
+
+.admin-dashboard-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 30px;
+}
+
+/* ================= STATS GRID ================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+/* ================= CARD ================= */
+
+.dashboard-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  border-color: #facc15;
+}
+
+.dashboard-card h3 {
+  color: #d1d5db;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.dashboard-card h2 {
+  color: #facc15;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.dashboard-card button {
+  background: #facc15;
+  color: #0f172a;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.dashboard-card button:hover {
+  transform: scale(1.03);
+}
+
+/* ================= BANNER SECTION ================= */
+
+.banner-section {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.banner-section h2 {
+  color: #facc15;
+  margin-bottom: 20px;
+}
+
+.banner-section input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e5e7eb;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.banner-section input:focus {
+  border-color: #facc15;
+}
+
+.banner-section input::placeholder {
+  color: #94a3b8;
+}
+
+.banner-section button {
+  background: #facc15;
+  color: #0f172a;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-section button:hover {
+  transform: scale(1.03);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 20px;
+  }
+
+  .admin-dashboard-title {
+    font-size: 26px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 34px;
+  }
+}
+
+/* ================= NEW PRODUCT ================= */
+
+.new-product-page {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.new-product-card {
+  width: 100%;
+  max-width: 700px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.new-product-card h1 {
+  color: #facc15;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.new-product-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.new-product-card input,
+.new-product-card textarea {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.new-product-card textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.new-product-card input:focus,
+.new-product-card textarea:focus {
+  outline: none;
+  border-color: #facc15;
+}
+
+.stock-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stock-control label {
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.stock-control button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #facc15;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stock-control span {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.add-product-btn {
+  background: #facc15;
+  color: #0f172a;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-product-btn:hover {
+  opacity: 0.9;
+}
+
+.product-grid-admin {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 24px;
+}
+
+.admin-product-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.admin-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.admin-product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.admin-product-card h3 {
+  color: #facc15;
+  padding: 15px 15px 5px;
+  margin: 0;
+}
+
+.product-category {
+  color: #cbd5e1;
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.product-desc {
+  color: #94a3b8;
+  padding: 10px 15px;
+  font-size: 14px;
+  min-height: 60px;
+}
+
+.stock {
+  color: #d1d5db;
+  padding: 0 15px 10px;
+}
+
+.admin-product-card .price {
+  color: #facc15;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 15px;
+}
+
+.admin-product-card button {
+  width: calc(100% - 30px);
+  margin: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.admin-product-card button:hover {
+  background: #dc2626;
 }

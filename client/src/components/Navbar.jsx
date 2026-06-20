@@ -55,10 +55,11 @@ function Navbar({ setSearch, cartCount, user }) {
           {/* ================= ADMIN NAV ================= */}
           {isAdmin && (
             <>
-              <Link to="/admin">Admin Dashboard</Link>
-              <Link to="/admin/orders">Admin Orders</Link>
-              <Link to="/admin/products">Admin Products</Link>
-              <Link to="/admin/users">Admin Users</Link>
+              <Link to="/admin">Dashboard</Link>
+              <Link to="/admin/orders">Orders</Link>
+              <Link to="/admin/products">Products</Link>
+              <Link to="/admin/new-product">New Product</Link>
+              <Link to="/admin/users">Users</Link>
             </>
           )}
 
